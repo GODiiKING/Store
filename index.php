@@ -85,73 +85,42 @@ include('includes/connect.php');
 
 
 <!-- fourth child -->
-<div class="row">
+<div class="row px-1">
     <div class="col-md-10">
       <!-- products -->
       <div class="row">
-        <!-- col-md-4 -->
-         <div class="col-md-4 mb-2"><div class="card">
-  <img src="./images/naruto.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div></div>
-
-         <div class="col-md-4 mb-2"><div class="card">
-  <img src="./images/logo.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div></div>
-
-         <div class="col-md-4 mb-2"><div class="card">
-  <img src="./images/sasuke.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div></div>
-
-<div class="col-md-4 mb-2"><div class="card">
-  <img src="./images/logo.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div></div>
-
-<div class="col-md-4 mb-2"><div class="card">
-  <img src="./images/logo.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div></div>
-
-<div class="col-md-4 mb-2"><div class="card">
-  <img src="./images/logo.png" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-info">Add to cart</a>
-    <a href="#" class="btn btn-secondary">View more</a>
-  </div>
-</div></div>
-
-      </div>
-    </div>
+      <!-- fetching products -->
+      <?php 
+      $select_query="Select * from `products` order by rand() limit 0,9";
+      $result_query=mysqli_query($con, $select_query);
+      // $row=mysqli_fetch_assoc($result_query);
+        // echo $row['product_title'];
+        while($row=mysqli_fetch_assoc($result_query)){
+          $product_id=$row['product_id'];
+          $product_title=$row['product_title'];
+          $product_description=$row['product_description'];
+          $product_image1=$row['product_image1'];
+          $product_image2=$row['product_image2'];
+          $product_image3=$row['product_image3'];
+          $product_price=$row['product_price'];
+          $category_id=$row['category_id'];
+          $brand_id=$row['brand_id'];
+          echo "<div class='col-md-4 mb-2'><div class='card'>
+                <img src='./admin_area/product_images/$product_image1' class='card-img-top' alt='$product_title'>
+                <div class='card-body'>
+                  <h5 class='card-title'>$product_title</h5>
+                  <p class='card-text'>$product_description</p>
+                  <a href='#' class='btn btn-info'>Add to cart</a>
+                  <a href='#' class='btn btn-secondary'>View more</a>
+                </div>
+        </div>
+</div>";
+}
+      ?>
+<!-- row end -->
+</div>
+<!-- col end -->
+</div>
 
 
 
