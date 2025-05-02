@@ -58,7 +58,7 @@
             
 
             <div class="button text-center">
-                <a href="#" class="btn btn-info text-light my-3">Insert Products</a>
+                <a href="insert_product.php" class="btn btn-info text-light my-3">Insert Products</a>
                 <a href="#" class="btn btn-info text-light my-3">View Products</a>
                 <a href="index.php?insert_category" class="btn btn-info text-light my-3">Insert Categories</a>
                 <a href="#" class="btn btn-info text-light my-3">View Categories</a>
