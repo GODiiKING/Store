@@ -46,7 +46,7 @@ include('functions/common_function.php');
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"><sup>1</sup></i></a>
+          <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"><sup><?php cart_item(); ?></sup></i></a>
         </li>
 
         <li class="nav-item">
