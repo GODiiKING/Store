@@ -8,7 +8,7 @@ include('functions/common_function.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Store</title>
+    <title>Store - Cart details</title>
     <!-- bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
      <!-- font awesome CSS -->
@@ -48,15 +48,7 @@ include('functions/common_function.php');
         <li class="nav-item">
           <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"><sup><?php cart_item(); ?></sup></i></a>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Total Price:<?php total_cart_price(); ?></a>
-        </li>
       </ul>
-      <form class="d-flex" action="search_product.php" method="get">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
-         <input type="submit" value="Search" class="btn btn-outline-light" name="search_data_product">
-      </form>
     </div>
   </div>
 </nav>
@@ -86,58 +78,45 @@ cart()
 
 
 
-<!-- fourth child -->
-<div class="row px-1">
-    <div class="col-md-10">
-      <!-- products -->
-      <div class="row">
-      <!-- fetching products -->
-      <?php 
-      // calling function
-      getproducts();
-      get_unique_categories();
-      get_unique_brands();  
-      // $ip = getIPAddress();  
-      // echo 'User Real IP Address - '.$ip;     
-      ?>
-<!-- row end -->
-</div>
-<!-- col end -->
-</div>
 
 
+        <!-- fourth child -->
+        <div class="container">
+            <div class="row">
+                <table class="table table-bordered text-center">
+                    <thead>
+                        <tr>
+                            <th>Product Title</th>
+                            <th>Product Image</th>
+                            <th>Quantity</th>
+                            <th>Total Price</th>
+                            <th>Remove</th>
+                            <th>Operations</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Apple</td>
+                            <td><img src="./images/logo.png" alt=""></td>
+                            <td><input type="text" name=""></td>
+                            <td>9000</td>
+                            <td><input type="checkbox"></td>
+                            <td>
+                                <p>Update</p>
+                                <p>Remove</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- subtotal -->
+                 <div class="d-flex mb-5">
+                    <h4 class="px-3">Subtotal:<strong class="text-info">5000/-</strong></h4>
+                    <a href="index.php"><button class="bg-info px-3 py-2 border-0 mx-3">Continue Shopping</button></a>
+                    <a href="#"><button class="bg-secondary p-3 py-2 border-0 text-light">Checkout</button></a>
+                 </div>
+            </div>
+        </div>
 
-<!-- col-md-2 -->
-    <div class="col-md-2 bg-secondary p-0">
-      <!-- sidenav -->
-       <!-- brand to be displayed -->
-       <ul class="navbar-nav me-auto text-center">
-        <li class="nav-item bg-info">
-          <a href="#" class="nav-link text-light"><h4>Delivery Brands</h4></a>
-          <?php 
-          getbrands()
-          ?>
-        </li>
-
-        
-       </ul>
-
-
-        <!-- Categories to be displayed -->
-        <ul class="navbar-nav me-auto text-center">
-        <li class="nav-item bg-info">
-          <a href="#" class="nav-link text-light"><h4>Categories</h4></a>
-        </li>
-
-        <?php 
-          getcategories()
-          ?>
-       </ul>
-
-    </div>
-</div>
-
-        <!-- last child -->
          <!-- footer -->
           <?php  
           include('./includes/footer.php');
