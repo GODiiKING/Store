@@ -34,8 +34,8 @@ include('../functions/common_function.php');
 
             <!-- image field -->
             <div class="form-outline mb-4">
-                        <label for="user_email" class="form-label">Email</label>
-                        <input type="file" id="user_image" class="form-control" required="required" name="user_email"/>     
+                        <label for="user_image" class="form-label">Upload image</label>
+                        <input type="file" id="user_image" class="form-control" required="required" name="user_image"/>     
             </div>
 
             <!-- password field -->
@@ -85,16 +85,26 @@ if(isset($_POST['user_register'])){
     $user_image_tmp = $_FILES['user_image']['tmp_name'];
     $user_ip=getIPAddress(); // function to get user IP address
 
-    // select query to check if the username or email already exists
+    // select query
+    $select_query = "select * from `user_table` where username='$user_username' or user_email='$user_email'"; // query to check if user already exists
+    $result = mysqli_query($con, $select_query); // function to execute the query
+    $row_count = mysqli_num_rows($result);  
+    if($row_count > 0){
+        echo "<script>alert('Username or email already exists')</script>";
+    } else if($user_password!=$conf_user_password){
+        echo "<script>alert('Password do not match')</script>";
+    } 
+    
+    
+    else {
+        // insert query
     move_uploaded_file($user_image_tmp,"./user_images/$user_image"); // function to upload image
     $insert_query = "insert into `user_table` (username, user_email, user_password, user_image, user_ip, user_address, user_mobile) values ('$user_username', '$user_email', '$user_password', '$user_image', '$user_ip', '$user_address', '$user_contact')";
-    $sql_execute=mysqli_query($con, $insert_query); // function to execute the query
-    if($sql_execute){
-        echo "<script>alert('Successfully registered')</script>";
-        echo "<script>window.open('user_login.php', '_self')</script>";
-} else{
-        die(mysqli_error($con)); // function to display error message
+    $sql_execute=mysqli_query($con, $insert_query);  
     }
+
+    
+
 
 
 
