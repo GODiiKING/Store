@@ -38,7 +38,7 @@ include('functions/common_function.php');
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Register</a>
+          <a class="nav-link" href="./users_area/user.registration.php">Register</a>
         </li>
 
         <li class="nav-item">
@@ -46,7 +46,7 @@ include('functions/common_function.php');
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fa-solid fa-cart-shopping"><sup>1</sup></i></a>
+          <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"><sup>1</sup></i></a>
         </li>
 
         <li class="nav-item">
@@ -72,7 +72,7 @@ include('functions/common_function.php');
     <a class="nav-link" href="#">Welcome Guest</a>
     </li>
     </li class="nav-item">
-    <a class="nav-link" href="#">Login</a>
+    <a class="nav-link" href="./users_area/user_login.php">Login</a>
     </li>
     </ul>
 </nav>
