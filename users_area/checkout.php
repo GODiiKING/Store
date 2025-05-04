@@ -1,6 +1,6 @@
 <!-- connect to file -->
 <?php 
-include('includes/connect.php');
+include('../includes/connect.php');
 
 ?>
 <!DOCTYPE html>
@@ -82,9 +82,11 @@ include('includes/connect.php');
       <div class="row">
         <?php
       if(!isset($_SESSION['username'])){
-        include('./users_area/user_login.php');
+        include('user_login.php');
+      } else{
+        include('../payment.php');
       }
-      ?>
+        ?>
 </div>
 <!-- col end -->
 </div>
@@ -94,7 +96,7 @@ include('includes/connect.php');
         <!-- last child -->
          <!-- footer -->
           <?php  
-          include('./includes/footer.php');
+          include('../includes/footer.php');
           ?>
     </div>
 
