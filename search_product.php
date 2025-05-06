@@ -2,6 +2,7 @@
 <?php 
 include('includes/connect.php');
 include('functions/common_function.php');
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +39,7 @@ include('functions/common_function.php');
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Register</a>
+          <a class="nav-link" href="./users_area/user.registration.php">Register</a>
         </li>
 
         <li class="nav-item">

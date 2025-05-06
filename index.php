@@ -101,8 +101,8 @@ cart()
 
 <!-- third child -->
 <div class="bg-light">
-    <h3 class="text-center">Hidden Store</h3>
-    <p class="text-center">Communication is at the heart of e-commerce and community</p>
+    <h3 class="text-center">Anime Store</h3>
+    <p class="text-center">Unleash the Otaku Within!</p>
 </div>
 
 
