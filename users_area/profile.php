@@ -29,6 +29,11 @@ session_start();
     /* height: 100%; */
     object-fit: contain;
     }
+    .edit_image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    }
     </style>
     
 </head>
@@ -142,7 +147,13 @@ cart()
         
         </ul>
     </div>
-    <div class="col-md-10"></div>
+    <div class="col-md-10 text-center">
+        <?php get_user_order_details();
+        if(isset($_GET['edit_account'])){
+            include('edit_account.php');
+        }
+        ?>
+    </div>
 </div> 
 
 
