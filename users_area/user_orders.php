@@ -55,10 +55,18 @@
                 <td>$amount_due</td>
                 <td>$total_products</td>
                 <td>$invoice_number</td>
-                <td>$order_status</td>
                 <td>$order_date</td>
-                <td><a href='confirm_payment.php?order_id=$order_id' class='text-light'>Confirm</a></td>
+                <td>$order_status</td>";
+                ?>
+
+                <?php
+                
+                if($order_status == 'Incomplete'){
+                    echo "<td>Paid</td>";
+                } else {
+                echo "<td><a href='confirm_payment.php?order_id=$order_id' class='text-light'>Confirm</a></td>
                 </tr>";
+                }
             $number++;
         }
         ?>
