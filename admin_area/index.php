@@ -74,9 +74,9 @@ body {
                 <a href="insert_product.php" class="btn btn-info text-light my-3">Insert Products</a>
                 <a href="index.php?view_products" class="btn btn-info text-light my-3">View Products</a>
                 <a href="index.php?insert_category" class="btn btn-info text-light my-3">Insert Categories</a>
-                <a href="#" class="btn btn-info text-light my-3">View Categories</a>
+                <a href="index.php?view_categories" class="btn btn-info text-light my-3">View Categories</a>
                 <a href="index.php?insert_brand" class="btn btn-info text-light my-3">Insert Brands</a>
-                <a href="#" class="btn btn-info text-light my-3">View Brands</a>
+                <a href="index.php?view_brands" class="btn btn-info text-light my-3">View Brands</a>
                 <a href="#" class="btn btn-info text-light my-3">All Orders</a>
                 <a href="#" class="btn btn-info text-light my-3">All Payments</a>
                 <a href="#" class="btn btn-info text-light my-3">List Users</a>
@@ -103,6 +103,12 @@ body {
         }
         if(isset($_GET['delete_products'])){
             include('delete_product.php');
+        }
+        if(isset($_GET['view_categories'])){
+            include('view_categories.php');
+        }
+        if(isset($_GET['view_brands'])){
+            include('view_brands.php');
         }
         
         ?>
