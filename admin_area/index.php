@@ -31,6 +31,10 @@ include('../functions/common_function.php');
 body {
     overflow-x: hidden;
 }
+.product_img {
+    width: 10%;
+    object-fit: contain;
+}
     </style>
 </head>
 <body>
@@ -98,9 +102,12 @@ body {
      </div>
 
      <!-- last child -->
-     <div class="bg-info p-3 text-center footer">
+     <!-- <div class="bg-info p-3 text-center footer">
             <p>All rights reserved ©- Designed by Dinesh van Putten</p>
-         </div>
+         </div> -->
+         <?php  
+          include('../includes/footer.php');
+          ?>
     </div>
 
 
