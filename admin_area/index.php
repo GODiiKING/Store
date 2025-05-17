@@ -110,6 +110,12 @@ body {
         if(isset($_GET['view_brands'])){
             include('view_brands.php');
         }
+        if(isset($_GET['edit_category'])){
+            include('edit_categories.php');
+        }
+        if(isset($_GET['edit_brands'])){
+            include('edit_brands.php');
+        }
         
         ?>
      </div>
