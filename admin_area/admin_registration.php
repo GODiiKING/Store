@@ -43,7 +43,7 @@
                         <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Enter your confirm password" required="required" class="form-control">
                     </div>
                     <input type="submit" name="admin_registration" value="Register" class="bg-info py-2 px-3 border-0">
-                    <p class="small fw-bold mt-2 pt-1">Already have an account? <a href="admin_login.php" class="link-danger">Login</a></p>
+                    <p class="small fw-bold mt-2 pt-1">Don't you have an account? <a href="admin_login.php" class="link-danger">Login</a></p>
                 </form>
             </div>
         </div>
