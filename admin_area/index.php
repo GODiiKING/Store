@@ -78,7 +78,7 @@ body {
                 <a href="index.php?insert_brand" class="btn btn-info text-light my-3">Insert Brands</a>
                 <a href="index.php?view_brands" class="btn btn-info text-light my-3">View Brands</a>
                 <a href="index.php?list_orders" class="btn btn-info text-light my-3">All Orders</a>
-                <a href="#" class="btn btn-info text-light my-3">All Payments</a>
+                <a href="index.php?list_payments" class="btn btn-info text-light my-3">All Payments</a>
                 <a href="#" class="btn btn-info text-light my-3">List Users</a>
                 <a href="#" class="btn btn-info text-light my-3">Logout</a>
             </div>
@@ -124,6 +124,9 @@ body {
         }
         if(isset($_GET['list_orders'])){
             include('list_orders.php');
+        }
+        if(isset($_GET['list_payments'])){
+            include('list_payments.php');
         }
         
         ?>
