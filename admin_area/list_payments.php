@@ -7,7 +7,7 @@
 </head>
 <body>
 <h3 class="text-center text-success">All payments</h3>
-<table class="table table-bordered mpayments
+<table class="table table-bordered mt-5">
 
     <?php 
     $get_payments = "SELECT * FROM `user_payments`";
