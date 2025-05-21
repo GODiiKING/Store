@@ -23,7 +23,7 @@ session_start();
         }
     </style>
 </head>
-<body>
+<body style="background-color:rgb(39, 9, 58);">
     <!-- navbar -->
     <div class="container-fluid p-0">
         <!-- first child -->
@@ -50,7 +50,7 @@ session_start();
         </li>";
         } else {
           echo "<li class='nav-item'>
-          <a class='nav-link text-white' href='./users_area/user.registration.php'>Register</a>
+          <a class='nav-link text-white' href='./users_area/user_registration.php'>Register</a>
         </li>";
         }
         ?>
@@ -85,25 +85,25 @@ cart()
 ?>
 
 <!-- second child -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <ul class="navbar-nav me-auto">
     <?php 
     if(!isset($_SESSION['username'])){
       echo " </li class='nav-item'>
-    <a class='nav-link' href='#'>Welcome Guest</a>
+    <a class='nav-link text-white' href='#'>Welcome Guest</a>
     </li>";
   }else{
       echo " <li class='nav-item'>
-      <a class='nav-link' href='#'>Welcome ".$_SESSION['username']."</a>
+      <a class='nav-link text-white' href='#'>Welcome ".$_SESSION['username']."</a>
       </li>";
   }
     if(!isset($_SESSION['username'])){
         echo " <li class='nav-item'>
-        <a class='nav-link' href='./users_area/user_logout.php'>Login</a>
+        <a class='nav-link' href='./users_area/user_login.php'>Login</a>
         </li>";
     }else{
         echo " <li class='nav-item'>
-        <a class='nav-link' href='./users_area/user_login.php'>Logout</a>
+        <a class='nav-link' href='./users_area/user_logout.php'>Logout</a>
         </li>";
     }
     ?>
@@ -112,9 +112,9 @@ cart()
 </nav>
 
 <!-- third child -->
-<div class="bg-light">
-    <h3 class="text-center">Anime Store</h3>
-    <p class="text-center">Unleash the Otaku Within!</p>
+<div class="bg-dark">
+    <h3 class="text-center text-light">Anime Store</h3>
+    <p class="text-center text-light">Unleash the Otaku Within!</p>
 </div>
 
 
@@ -145,8 +145,8 @@ cart()
       <!-- sidenav -->
        <!-- brand to be displayed -->
        <ul class="navbar-nav me-auto text-center">
-        <li class="nav-item bg-info">
-          <a href="#" class="nav-link text-light"><h4>Delivery Brands</h4></a>
+        <li class="nav-item bg-dark">
+          <a href="#" class="nav-link text-white"><h4>Delivery Brands</h4></a>
           <?php 
           getbrands()
           ?>
@@ -158,8 +158,8 @@ cart()
 
         <!-- Categories to be displayed -->
         <ul class="navbar-nav me-auto text-center">
-        <li class="nav-item bg-info">
-          <a href="#" class="nav-link text-light"><h4>Categories</h4></a>
+        <li class="nav-item bg-dark">
+          <a href="#" class="nav-link text-white"><h4>Categories</h4></a>
         </li>
 
         <?php 

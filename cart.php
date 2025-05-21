@@ -25,11 +25,11 @@ session_start();
 }
     </style>
 </head>
-<body>
+<body style="background-color: #212529;">
     <!-- navbar -->
     <div class="container-fluid p-0">
         <!-- first child -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <div class="container-fluid">
     <img src="./images/logo.png" alt="" class="logo">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,23 +38,23 @@ session_start();
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link active text-white" aria-current="page" href="index.php">Home</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="display_all.php">Products</a>
+          <a class="nav-link text-white" href="display_all.php">Products</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="./users_area/user.registration.php">Register</a>
+          <a class="nav-link text-white" href="./users_area/user.registration.php">Register</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link text-white" href="#">Contact</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"><sup><?php cart_item(); ?></sup></i></a>
+          <a class="nav-link text-white" href="cart.php"><i class="fa-solid fa-cart-shopping"><sup><?php cart_item(); ?></sup></i></a>
         </li>
       </ul>
     </div>
@@ -67,12 +67,12 @@ cart()
 ?>
 
 <!-- second child -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <ul class="navbar-nav me-auto">
     <?php 
       if(!isset($_SESSION['username'])){
         echo " </li class='nav-item'>
-      <a class='nav-link' href='#'>Welcome Guest</a>
+      <a class='nav-link text-white' href='#'>Welcome Guest</a>
       </li>";
     }else{
         echo " <li class='nav-item'>
@@ -82,7 +82,7 @@ cart()
     }
     if(!isset($_SESSION['username'])){
       echo "<li class='nav-item'>
-      <a class='nav-link' href='./users_area/user_login.php'>Login</a>
+      <a class='nav-link text-white' href='./users_area/user_login.php'>Login</a>
       </li>";
   }else{  
       echo "<li class='nav-item'>
@@ -97,9 +97,9 @@ cart()
 </nav>
 
 <!-- third child -->
-<div class="bg-light">
-<h3 class="text-center">Anime Store</h3>
-<p class="text-center">Unleash the Otaku Within!</p>
+<div class="bg-dark">
+<h3 class="text-center text-white">Anime Store</h3>
+<p class="text-center text-white">Unleash the Otaku Within!</p>
 </div>
 
 
@@ -180,22 +180,41 @@ cart()
                     </tbody>
                 </table>
                 <!-- subtotal -->
-                 <div class="d-flex mb-5">
+                 <div class="d-flex mb-5 text-white">
                         <?php 
-                        $get_ip_add=getIPAddress();
-                        $cart_query="Select * from `cart_details` where ip_address='$get_ip_add'";
-                        $result_query=mysqli_query($con, $cart_query);
-                        $result_count=mysqli_num_rows($result_query); // ?
-                         if($result_count>0){
-                          echo " <h4 class='px-3'>Subtotal:<strong class='text-info'>< $total_price /-</strong></h4>
-                          <input type='submit' value= 'Continue Shopping' name='Continue Shopping' class='bg-info px-3 py-2 border-0 mx-3'>
-                          <button class='bg-secondary p-3 py-2 border-0'><a href='checkout.php' class='text-light text-decoration-none'>Checkout</a></button>";
-                         } else{
-                          echo "<input type='submit' value= 'Continue Shopping' name='continue shopping' class='bg-info px-3 py-2 border-0 mx-3'>";
-                          }
-                          if (isset($_POST['continue_shopping'])){
-                            echo "<script>window.open('index.php','_self')</script>";
-                          }
+                        // $get_ip_add=getIPAddress();
+                        // $cart_query="Select * from `cart_details` where ip_address='$get_ip_add'";
+                        // $result_query=mysqli_query($con, $cart_query);
+                        // $result_count=mysqli_num_rows($result_query); // ?
+                        //  if($result_count>0){
+                        //   echo " <h4 class='px-3'>Subtotal:<strong class='text-white'>< $total_price /-</strong></h4>
+                        //   <input type='submit' value= 'Continue Shopping' name='Continue Shopping' class='bg-secondary px-3 py-2 border-0 mx-3'>
+                        //   <button class='bg-secondary p-3 py-2 border-0'><a href='checkout.php' class='text-dark text-decoration-none'>Checkout</a></button>";
+                        //  } else{
+                        //   echo "<input type='submit' value= 'Continue Shopping' name='continue_shopping' class='bg-info px-3 py-2 border-0 mx-3'>";
+                        //   }
+                        //   if (isset($_POST['continue_shopping'])){
+                        //     echo "<script>window.open('index.php','_self')</script>";
+                        //   }
+
+                        
+                        $get_ip_add = getIPAddress();
+                        $cart_query = "Select * from `cart_details` where ip_address='$get_ip_add'";
+                        $result_query = mysqli_query($con, $cart_query);
+                        $result_count = mysqli_num_rows($result_query);
+                        
+                        if ($result_count > 0) {
+                            echo "
+                            <h4 class='px-3'>Subtotal: <strong class='text-white'>$total_price /-</strong></h4>
+                            <input type='submit' value='Continue Shopping' name='continue_shopping' class='bg-secondary px-3 py-2 border-0 mx-3'>
+                            <a href='checkout.php' class='bg-secondary p-3 py-2 border-0 text-dark text-decoration-none'>Checkout</a>";
+                        } else {
+                            echo "<input type='submit' value='Continue Shopping' name='continue_shopping' class='bg-info px-3 py-2 border-0 mx-3'>";
+                        }
+                        
+                        if (isset($_POST['continue_shopping'])) {
+                            echo "<script>window.open('index.php', '_self')</script>";
+                        }
                           ?>
 
                     

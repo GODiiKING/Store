@@ -13,58 +13,58 @@ include('../functions/common_function.php');
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 
 </head>
-<body>
+<body style="background-color: #212529;">
     <div class="container-fluid my-3">
-        <h2 class="text-center">New User Registration</h2>
+        <h2 class="text-center text-white">New User Registration</h2>
         <div class="row d-flex align-items-center justify-content-center">
         <div class="col-lg-12 col-xl-6">
 
                 <form action="" method="post" enctype="multipart/form-data">
                     <!-- username field -->
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 text-white">
                         <label for="user_username" class="form-label">Username</label>
-                        <input type="text" id="user_username" class="form-control" placeholder="Enter your username" autocomplete="off" required="required" name="user_username"/>     
+                        <input type="text" id="user_username" class="form-control " placeholder="Enter your username" autocomplete="off" required="required" name="user_username"/>     
                     </div>
 
                     <!-- email field -->
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 text-white">
                         <label for="user_email" class="form-label">Email</label>
                         <input type="email" id="user_email" class="form-control" placeholder="Enter your email" autocomplete="off" required="required" name="user_email"/>     
             </div>
 
             <!-- image field -->
-            <div class="form-outline mb-4">
+            <div class="form-outline mb-4 text-white">
                         <label for="user_image" class="form-label">Upload image</label>
                         <input type="file" id="user_image" class="form-control" required="required" name="user_image"/>     
             </div>
 
             <!-- password field -->
-            <div class="form-outline mb-4">
+            <div class="form-outline mb-4 text-white">
             <label for="user_password" class="form-label">Password</label>
                         <input type="password" id="user_password" class="form-control" placeholder="Enter your password" autocomplete="off" required="required" name="user_password"/> 
                         </div>
 
                         <!-- confirm password field -->
-            <div class="form-outline mb-4">
+            <div class="form-outline mb-4 text-white">
             <label for="conf_user_password" class="form-label">Confirm Password</label>
                         <input type="password" id="conf_user_password" class="form-control" placeholder="Confirm password" autocomplete="off" required="required" name="conf_user_password"/> 
                         </div>
 
                         <!-- address field -->
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 text-white">
                         <label for="user_address" class="form-label">Enter your address</label>
                         <input type="text" id="user_address" class="form-control" placeholder="Enter your address" autocomplete="off" required="required" name="user_address"/>     
                     </div>
 
                     <!-- contact field -->
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 text-white">
                         <label for="user_contact" class="form-label">Contact</label>
                         <input type="text" id="user_contact" class="form-control" placeholder="Enter your mobile number" autocomplete="off" required="required" name="user_contact"/>     
                     </div>
 
                     <div class="mt-4 pt-2">
-                        <input type="submit" value="Register" class="bg-info py-2 px-3 border-0" name="user_register"/>
-                        <p class="small fw-bold mt-2 pt-1 mb-0">Already have an account ? <a href="user_login.php" class="text-danger"> Login</a></p>
+                        <input type="submit" value="Register" class="bg-secondary text-white py-2 px-3 border-0" name="user_register"/>
+                        <p class="small fw-bold mt-2 pt-1 mb-0 text-white">Already have an account ? <a href="user_login.php" class="text-danger"> Login</a></p>
                     </div>
 </form>
         </div>
