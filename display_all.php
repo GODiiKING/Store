@@ -17,12 +17,15 @@ session_start();
 
     <!-- custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
 </head>
 <body>
     <!-- navbar -->
     <div class="container-fluid p-0">
         <!-- first child -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <div class="container-fluid">
     <img src="./images/logo.png" alt="" class="logo">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,9 +92,9 @@ session_start();
         </li>";
     }
       ?>
-    </li class="nav-item">
+    <!-- </li class="nav-item">
     <a class="nav-link" href="./users_area/user_login.php">Login</a>
-    </li>
+    </li> -->
     </ul>
 </nav>
 

@@ -27,7 +27,7 @@ session_start();
     <!-- navbar -->
     <div class="container-fluid p-0">
         <!-- first child -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <div class="container-fluid">
     <img src="./images/logo.png" alt="" class="logo">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,39 +36,39 @@ session_start();
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+          <a class="nav-link active text-white" aria-current="page" href="index.php">Home</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="display_all.php">Products</a>
+          <a class="nav-link text-white" href="display_all.php">Products</a>
         </li>
 
         <?php 
         if(isset($_SESSION['username'])){
           echo "<li class='nav-item'>
-          <a class='nav-link' href='./users_area/profile.php'>My Account</a>
+          <a class='nav-link text-white' href='./users_area/profile.php'>My Account</a>
         </li>";
         } else {
           echo "<li class='nav-item'>
-          <a class='nav-link' href='./users_area/user.registration.php'>Register</a>
+          <a class='nav-link text-white' href='./users_area/user.registration.php'>Register</a>
         </li>";
         }
         ?>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="./users_area/user.registration.php">Register</a>
+        </li> -->
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Contact</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link text-white" href="cart.php"><i class="fa-solid fa-cart-shopping"><sup><?php cart_item(); ?></sup></i></a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="cart.php"><i class="fa-solid fa-cart-shopping"><sup><?php cart_item(); ?></sup></i></a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Total Price:<?php total_cart_price(); ?></a>
+          <a class="nav-link text-white" href="#">Total Price:<?php total_cart_price(); ?></a>
         </li>
       </ul>
       <form class="d-flex" action="search_product.php" method="get">
