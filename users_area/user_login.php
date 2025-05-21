@@ -23,6 +23,7 @@ session_start();
 </head>
 <body style="background-color: #212529;">
     <div class="container-fluid my-3">
+    <a href="../index.php" class="btn btn-secondary d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; border-radius: 0; margin: 10px; font-size: 24px;">&#8592;</a>
         <h2 class="text-center text-white">User Login</h2>
         <div class="row d-flex align-items-center justify-content-center">
         <div class="col-lg-12 col-xl-6">

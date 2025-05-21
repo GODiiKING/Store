@@ -46,7 +46,7 @@ session_start();
         </li>
 
         <li class="nav-item">
-          <a class="nav-link text-white" href="./users_area/user.registration.php">Register</a>
+          <a class="nav-link text-white" href="./users_area/user_registration.php">Register</a>
         </li>
 
         <li class="nav-item">

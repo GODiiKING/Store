@@ -222,55 +222,58 @@ function search_product(){
 }
 
 // view details function
-function view_details(){
+function view_details() {
   global $con;
 
-  // condition to check isset or not
-  if(!isset($_GET['product_id'])){
-  if(!isset($_GET['category'])){
-      if(!isset($_GET['brand'])){    
-        $product_id=$_GET['product_id'];
-  $select_query="Select * from `products` where product_id=$product_id";
-    $result_query=mysqli_query($con, $select_query);
-      while($row=mysqli_fetch_assoc($result_query)){
-        $product_id=$row['product_id'];
-        $product_title=$row['product_title'];
-        $product_description=$row['product_description'];
-        $product_image1=$row['product_image1'];
-        $product_image2=$row['product_image2'];
-        $product_image3=$row['product_image3'];
-        $product_price=$row['product_price'];
-        $category_id=$row['category_id'];
-        $brand_id=$row['brand_id'];
-        echo "<div class='col-md-4 mb-2'>
-        <div class='card'>
-              <img src='./admin_area/product_images/$product_image1' class='card-img-top' alt='$product_title'>
-              <div class='card-body'>
-                <h5 class='card-title'>$product_title</h5>
-                <p class='card-text'>$product_description</p>
-                <p class='card-text'>Price: $product_price/-</p>
-                <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
-                <a href='index.php' class='btn btn-secondary'>Go home</a>
+  // Check if 'product_id' is set
+  if (isset($_GET['product_id'])) {
+      $product_id = $_GET['product_id'];
+
+      // Fetch product details
+      $select_query = "SELECT * FROM `products` WHERE product_id=$product_id";
+      $result_query = mysqli_query($con, $select_query);
+
+      if (!$result_query) {
+          echo "<h3 class='text-center text-danger'>Error fetching product details</h3>";
+          return;
+      }
+
+      while ($row = mysqli_fetch_assoc($result_query)) {
+          $product_title = $row['product_title'];
+          $product_description = $row['product_description'];
+          $product_image1 = $row['product_image1'];
+          $product_image2 = $row['product_image2'];
+          $product_image3 = $row['product_image3'];
+          $product_price = $row['product_price'];
+
+          echo "<div class='col-md-4 mb-2'>
+                  <div class='card'>
+                      <img src='./admin_area/product_images/$product_image1' class='card-img-top' alt='$product_title'>
+                      <div class='card-body'>
+                          <h5 class='card-title'>$product_title</h5>
+                          <p class='card-text'>$product_description</p>
+                          <p class='card-text'>Price: $product_price/-</p>
+                          <a href='index.php?add_to_cart=$product_id' class='btn btn-info'>Add to cart</a>
+                          <a href='index.php' class='btn btn-secondary'>Go home</a>
+                      </div>
+                  </div>
               </div>
-      </div>
-</div>
-<div class='col-md-8'>
-          <!-- related images -->
-           <div class='row'>
-            <div class='col-md-12'>
-              <h4 class='text-center text-info mb-5'>Related products</h4>
-            </div>
-            <div class='col-md-6'>
-            <img src='./admin_area/product_images/$product_image2' class='card-img-top' alt='$product_title'>
-            </div>
-            <div class='col-md-6'>
-            <img src='./admin_area/product_images/$product_image3' class='card-img-top' alt='$product_title'>
-            </div>
-           </div>
-        </div>";
-}
-}
-}
+              <div class='col-md-8'>
+                  <div class='row'>
+                      <div class='col-md-12'>
+                          <h4 class='text-center text-info mb-5'>Related products</h4>
+                      </div>
+                      <div class='col-md-6'>
+                          <img src='./admin_area/product_images/$product_image2' class='card-img-top' alt='$product_title'>
+                      </div>
+                      <div class='col-md-6'>
+                          <img src='./admin_area/product_images/$product_image3' class='card-img-top' alt='$product_title'>
+                      </div>
+                  </div>
+              </div>";
+      }
+  } else {
+      echo "<h3 class='text-center text-danger'>No product selected</h3>";
   }
 }
 
@@ -356,12 +359,12 @@ function cart_item(){
 function get_user_order_details(){
   global $con;
   $username = $_SESSION['username'];
-  $get_user_orders = "SELECT * FROM `user_orders` WHERE username='$username'";
-  $result_query = mysqli_query($con, $get_user_orders);
+  $get_details = "SELECT * FROM `user_table` WHERE username='$username'";
+  $result_query = mysqli_query($con, $get_details);
 
   if(mysqli_num_rows($result_query) > 0){
-    while($row = mysqli_fetch_array($result_query)){
-      $user_id = $row['user_id'];
+    while($row_query = mysqli_fetch_array($result_query)){
+      $user_id = $row_query['user_id'];
 
       if(!isset($_GET['edit_account'])){
         if(!isset($_GET['my_orders'])){
