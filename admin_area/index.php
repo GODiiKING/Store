@@ -37,19 +37,19 @@ body {
 }
     </style>
 </head>
-<body>
+<body class="bg-dark">
 
     <!-- navbar -->
     <div class="container-fluid p-0">
         <!-- first child -->
-        <nav class="navbar navbar-expend-lg navbar-light bg-info">
+        <nav class="navbar navbar-expend-lg navbar-light bg-dark">
             <div class="container-fluid">
                 <img src="../images/logo.png" alt="" class="logo">
 
                 <nav class="navbar navbar-expend-lg">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a href="" class="nav-link">Welcome guest</a>
+                            <a href="" class="nav-link text-light">Welcome guest</a>
                         </li>
                     </ul>
                 </nav>
@@ -57,13 +57,13 @@ body {
         </nav>
 
         <!-- second child -->
-        <div class="bg-light">
-            <h3 class="text-center p-2">Manage Details</h3>
+        <div class="bg-dark">
+            <h3 class="text-center p-2 text-light">Manage Details</h3>
         </div>
 
     <!-- third child -->
      <div class="row">
-        <div class="col-md-12 bg-secondary p-1 d-flex align-items-center">
+        <div class="col-md-12 bg-dark p-1 d-flex align-items-center">
             <div class="p-3">
                 <a href="#"><img src="../images/logo.png" alt="" class="admin_image"></a>
                 <p class="text-light text-center">Admin Name</p>
@@ -71,16 +71,16 @@ body {
             
 
             <div class="button text-center">
-                <a href="insert_product.php" class="btn btn-info text-light my-3">Insert Products</a>
-                <a href="index.php?view_products" class="btn btn-info text-light my-3">View Products</a>
-                <a href="index.php?insert_category" class="btn btn-info text-light my-3">Insert Categories</a>
-                <a href="index.php?view_categories" class="btn btn-info text-light my-3">View Categories</a>
-                <a href="index.php?insert_brand" class="btn btn-info text-light my-3">Insert Brands</a>
-                <a href="index.php?view_brands" class="btn btn-info text-light my-3">View Brands</a>
-                <a href="index.php?list_orders" class="btn btn-info text-light my-3">All Orders</a>
-                <a href="index.php?list_payments" class="btn btn-info text-light my-3">All Payments</a>
-                <a href="index.php?list_users" class="btn btn-info text-light my-3">List Users</a>
-                <a href="#" class="btn btn-info text-light my-3">Logout</a>
+                <a href="insert_product.php" class="btn btn-secondary text-dark my-3">Insert Products</a>
+                <a href="index.php?view_products" class="btn btn-secondary text-dark my-3">View Products</a>
+                <a href="index.php?insert_category" class="btn btn-secondary text-dark my-3">Insert Categories</a>
+                <a href="index.php?view_categories" class="btn btn-secondary text-dark my-3">View Categories</a>
+                <a href="index.php?insert_brand" class="btn btn-secondary text-dark my-3">Insert Brands</a>
+                <a href="index.php?view_brands" class="btn btn-secondary text-dark my-3">View Brands</a>
+                <a href="index.php?list_orders" class="btn btn-secondary text-dark my-3">All Orders</a>
+                <a href="index.php?list_payments" class="btn btn-secondary text-dark my-3">All Payments</a>
+                <a href="index.php?list_users" class="btn btn-secondary text-dark my-3">List Users</a>
+                <a href="#" class="btn btn-secondary text-dark my-3">Logout</a>
             </div>
         </div>
      </div>

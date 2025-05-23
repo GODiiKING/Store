@@ -1,8 +1,8 @@
 <!-- connect to file -->
 <?php 
-include('includes/connect.php');
+include('../includes/connect.php');
 session_start();
-if(!isset($_GET['order_id'])) {
+if(isset($_GET['order_id'])) {
     $order_id = $_GET['order_id'];
     // echo $order_id;
     $select_data = "SELECT * FROM `user_orders` WHERE order_id='$order_id'";
@@ -39,16 +39,16 @@ if(isset($_POST['confirm_payment'])) {
     <!-- bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
-<body class="bg-secondary">
+<body class="bg-dark">
     <h1 class="text-center text-light">Confirm Payment</h1>
     <div class="container my-5">
         <form action="" method="post">
             <div class="form-outline my-4 text-center w-50 m-auto">
-                <input type="text" class="form-control w-50 m-auto" name="invoice_number" value="<?php echo $invoice_number; ?>">
+                <input type="text" class="form-control w-50 m-auto" name="invoice_number" value="<?php echo $invoice_number ?>">
             </div>
             <div class="form-outline my-4 text-center w-50 m-auto">
                 <label for="amount" class="text-light">Amount</label>
-                <input type="text" class="form-control w-50 m-auto" name="amount" value="<?php echo $amount_due; ?>">
+                <input type="text" class="form-control w-50 m-auto" name="amount" value="<?php echo $amount_due ?>">
             </div>
             <div class="form-outline my-4 text-center w-50 m-auto">
                 <select name="payment_mode" class="form-select w-50 m-auto">
@@ -61,7 +61,7 @@ if(isset($_POST['confirm_payment'])) {
                 </select>
             </div>
             <div class="form-outline my-4 text-center w-50 m-auto">
-                <input type="submit" class="bg-info py-2 px-3 border-0" name="confirm_payment" value="Confirm">
+                <input type="submit" class="bg-secondary py-2 px-3 border-0" name="confirm_payment" value="Confirm">
             </div>
         </form>
     </div>

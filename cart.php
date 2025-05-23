@@ -142,8 +142,8 @@ cart()
                            $price_table=$row_product_price['product_price'];
                            $product_title=$row_product_price['product_title'];
                            $product_image1=$row_product_price['product_image1'];
-                           $product_values=array_sum($product_price); //[200]
-                           $total_price+=$product_values; //[200]
+                           $product_values=array_sum($product_price); 
+                           $total_price+=$product_values; 
                          
                        ?>
                         <tr>
@@ -163,9 +163,9 @@ cart()
                             <td><input type="checkbox" name="removeitem[]" value="<?php echo $product_id  ?>"></td>
                             <td>
                               <!-- <button class="bg-info px-3 py-2 border-0 mx-3">Update</button> -->
-                               <input type="submit" value="Update Cart" name="update_cart" class="bg-info px-3 py-2 border-0 mx-3">
+                               <input type="submit" value="Update Cart" name="update_cart" class="bg-secondary px-3 py-2 border-0 mx-3">
                               <!-- <button class="bg-info px-3 py-2 border-0 mx-3">Remove</button> -->
-                              <input type="submit" value="Remove Cart" name="remove_cart" class="bg-info px-3 py-2 border-0 mx-3">
+                              <input type="submit" value="Remove Cart" name="remove_cart" class="bg-secondary px-3 py-2 border-0 mx-3">
                             </td>
 
                         </tr>

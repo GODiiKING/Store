@@ -16,34 +16,34 @@
         }
      </style>
 </head>
-<body>
+<body class="bg-dark">
     <div class="container-fluid m-3">
-        <h2 class="text-center mb-5">Admin Registration</h2>
+        <h2 class="text-center mb-5 text-light">Admin Registration</h2>
         <div class="row d-flex justify-content-center">
             <div class="col-lg-6 col-xl-5">
-                <img src="../images/logo.png" alt="Admin Registration" class="img-fluid">
+            <img src="../images/logo.png" alt="Admin Registration" class="img-fluid mx-auto d-block" style="max-width: 30%; height: auto;">
             </div>
         </div>
         <div class="col-lg-6 col-xl-4">
                 <form action="" method="post">
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 text-light">
                         <label for="username" class="form-label">Username</label>
                         <input type="text" name="username" id="username" class="form-control" placeholder="Enter your username" required="required" class="form-control">
                     </div>
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 text-light">
                         <label for="email" class="form-label">Email</label>
                         <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required="required" class="form-control">
                     </div>
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 text-light">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required="required" class="form-control">
                     </div>
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 text-light">
                         <label for="confirm_password" class="form-label">Confirm Password</label>
                         <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Enter your confirm password" required="required" class="form-control">
                     </div>
-                    <input type="submit" name="admin_registration" value="Register" class="bg-info py-2 px-3 border-0">
-                    <p class="small fw-bold mt-2 pt-1">Don't you have an account? <a href="admin_login.php" class="link-danger">Login</a></p>
+                    <input type="submit" name="admin_registration" value="Register" class="bg-secondary py-2 px-3 border-0">
+                    <p class="small fw-bold mt-2 pt-1 text-light">Don't you have an account? <a href="admin_login.php" class="link-danger">Login</a></p>
                 </form>
             </div>
         </div>

@@ -16,28 +16,28 @@
         }
      </style>
 </head>
-<body>
+<body class="bg-dark">
     <div class="container-fluid m-3">
-        <h2 class="text-center mb-5">Admin Login</h2>
+        <h2 class="text-center mb-5 text-light">Admin Login</h2>
         <div class="row d-flex justify-content-center">
             <div class="col-lg-6 col-xl-5">
-                <img src="../images/logo.png" alt="Admin Registration" class="img-fluid">
+            <img src="../images/logo.png" alt="Admin Registration" class="img-fluid mx-auto d-block" style="max-width: 30%; height: auto;">
             </div>
         </div>
         <div class="col-lg-6 col-xl-4">
                 <form action="" method="post">
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 text-light">
                         <label for="username" class="form-label">Username</label>
                         <input type="text" name="username" id="username" class="form-control" placeholder="Enter your username" required="required" class="form-control">
                     </div>
 
-                    <div class="form-outline mb-4">
+                    <div class="form-outline mb-4 text-light">
                         <label for="password" class="form-label">Password</label>
                         <input type="password" name="password" id="password" class="form-control" placeholder="Enter your password" required="required" class="form-control">
                     </div>
 
-                    <input type="submit" name="admin_login" value="Login" class="bg-info py-2 px-3 border-0">
-                    <p class="small fw-bold mt-2 pt-1">Already have an account? <a href="admin_registration.php" class="link-danger">Register</a></p>
+                    <input type="submit" name="admin_login" value="Login" class="bg-secondary py-2 px-3 border-0">
+                    <p class="small fw-bold mt-2 pt-1 text-light">Already have an account? <a href="admin_registration.php" class="link-danger">Register</a></p>
                 </form>
             </div>
         </div>

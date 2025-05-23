@@ -27,7 +27,7 @@ include('../includes/connect.php');
     <!-- navbar -->
     <div class="container-fluid p-0">
         <!-- first child -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-info">
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
   <div class="container-fluid">
     <img src="../images/logo.png" alt="" class="logo">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,19 +36,19 @@ include('../includes/connect.php');
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="../index.php">Home</a>
+          <a class="nav-link active text-white" aria-current="page" href="../index.php">Home</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="../display_all.php">Products</a>
+          <a class="nav-link text-white" href="../display_all.php">Products</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="user_registration.php">Register</a>
+          <a class="nav-link text-white" href="user_registration.php">Register</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link text-white" href="#">Contact</a>
         </li>
       </ul>
       <form class="d-flex" action="search_product.php" method="get">
@@ -62,7 +62,7 @@ include('../includes/connect.php');
 
 
 <!-- second child -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <ul class="navbar-nav me-auto">
     <?php 
       if(!isset($_SESSION['username'])){
@@ -92,9 +92,9 @@ include('../includes/connect.php');
 </nav>
 
 <!-- third child -->
-<div class="bg-light">
-<h3 class="text-center">Anime Store</h3>
-<p class="text-center">Unleash the Otaku Within!</p>
+<div class="bg-dark">
+<h3 class="text-center text-light">Anime Store</h3>
+<p class="text-center text-light">Unleash the Otaku Within!</p>
 </div>
 
 

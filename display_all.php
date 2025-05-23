@@ -21,7 +21,7 @@ session_start();
 
     </style>
 </head>
-<body style="background-color:rgb(39, 9, 58);">
+<body style="background-color: #212529;">
     <!-- navbar -->
     <div class="container-fluid p-0">
         <!-- first child -->
