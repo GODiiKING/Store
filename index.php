@@ -21,6 +21,12 @@ session_start();
         body{
             overflow-x: hidden;
         }
+        .card img {
+    width: 100%; /* Adjust width to fit the card */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Set a slightly larger maximum height */
+    object-fit: contain; /* Ensure the entire image fits within the card */
+}
     </style>
 </head>
 <body style="background-color: #212529;"> <!-- style="background-color:rgb(39, 9, 58);" -->
@@ -137,7 +143,6 @@ cart()
 </div>
 <!-- col end -->
 </div>
-
 
 
 <!-- col-md-2 -->

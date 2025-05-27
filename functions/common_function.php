@@ -249,19 +249,19 @@ function view_details() {
           echo "<div class='col-md-4 mb-2'>
                   <div class='card'>
                       <img src='./admin_area/product_images/$product_image1' class='card-img-top bg-dark' alt='$product_title'>
-                      <div class='card-body'>
+                      <div class='card-body bg-dark'>
                           <h5 class='card-title text-light'>$product_title</h5>
                           <p class='card-text text-light'>$product_description</p>
                           <p class='card-text text-light'>Price: $product_price/-</p>
                           <a href='index.php?add_to_cart=$product_id' class='btn btn-secondary text-dark'>Add to cart</a>
-                          <a href='index.php' class='btn btn-secondary'>Go home</a>
+                          <a href='index.php' class='btn btn-secondary text-dark'>Go home</a>
                       </div>
                   </div>
               </div>
               <div class='col-md-8'>
                   <div class='row'>
                       <div class='col-md-12'>
-                          <h4 class='text-center text-info mb-5'>Related products</h4>
+                          <h4 class='text-center text-info mb-5'></h4>
                       </div>
                       <div class='col-md-6'>
                           <img src='./admin_area/product_images/$product_image2' class='card-img-top' alt='$product_title'>

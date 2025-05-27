@@ -18,7 +18,12 @@ session_start();
     <!-- custom CSS -->
     <link rel="stylesheet" href="style.css">
     <style>
-
+.card img {
+    width: 100%; /* Adjust width to fit the card */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Set a slightly larger maximum height */
+    object-fit: contain; /* Ensure the entire image fits within the card */
+}
     </style>
 </head>
 <body style="background-color: #212529;">

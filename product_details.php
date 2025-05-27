@@ -18,7 +18,7 @@ session_start();
     <!-- custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body style="background-color:rgb(39, 9, 58);">
+<body style="background-color: #212529;">
     <!-- navbar -->
     <div class="container-fluid p-0">
         <!-- first child -->
@@ -133,8 +133,8 @@ cart()
       <!-- sidenav -->
        <!-- brand to be displayed -->
        <ul class="navbar-nav me-auto text-center">
-        <li class="nav-item bg-info">
-          <a href="#" class="nav-link text-light"><h4>Delivery Brands</h4></a>
+        <li class="nav-item bg-dark">
+          <a href="#" class="nav-link text-white"><h4>Delivery Brands</h4></a>
           <?php 
           getbrands()
           ?>
@@ -146,8 +146,8 @@ cart()
 
         <!-- Categories to be displayed -->
         <ul class="navbar-nav me-auto text-center">
-        <li class="nav-item bg-info">
-          <a href="#" class="nav-link text-light"><h4>Categories</h4></a>
+        <li class="nav-item bg-dark">
+          <a href="#" class="nav-link text-white"><h4>Categories</h4></a>
         </li>
 
         <?php 
