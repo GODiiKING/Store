@@ -17,7 +17,17 @@
   - [💻 How to Install](#-how-to-install)
     - [⚙️ Prerequisites](#️-prerequisites)
     - [📥 Setup](#-setup)
-  - [📁 Project Structure](#-project-structure)
+- [Anime Store - Project Structure](#anime-store---project-structure)
+  - [🗂️ Directory Breakdown](#️-directory-breakdown)
+    - [**Frontend Structure**](#frontend-structure)
+    - [**Backend Structure**](#backend-structure)
+    - [**Core Features by File**](#core-features-by-file)
+    - [**Database Schema (Inferred)**](#database-schema-inferred)
+  - [🔧 Technology Stack](#-technology-stack)
+  - [🚀 Key Functionalities](#-key-functionalities)
+    - [**User Features**](#user-features)
+    - [**Admin Features**](#admin-features)
+    - [**System Features**](#system-features)
   - [🤝 How to Contribute](#-how-to-contribute)
   - [📄 License](#-license)
     - [✅ Suggestions to Improve the README:](#-suggestions-to-improve-the-readme)
@@ -99,23 +109,195 @@ Anime Store is a complete PHP-based e-commerce solution with essential features 
 
 ---
 
-## 📁 Project Structure
+# Anime Store - Project Structure
 
 ```
 anime-store/
-├── admin_area/             # Admin panel for managing products, categories, and orders
-├── functions/              # Utility functions used throughout the site
-├── images/                 # Product images, logos, and banners
-├── includes/               # Shared components like DB connection and page templates
-├── users_area/             # User dashboard, login, orders, and profile management
-├── cart.php                # Shopping cart logic
-├── display_all.php         # Product listing page
-├── index.php               # Homepage of the store
-├── product_details.php     # Individual product view
-├── search_product.php      # Search bar functionality
-├── style.css               # Application styles
-└── README.md               # You're here!
+│
+├── 📁 admin_area/                    # Admin panel for managing products, categories, and orders
+│   ├── admin_login.php               # Admin authentication
+│   ├── admin_dashboard.php           # Main admin control panel
+│   ├── insert_product.php            # Add new products
+│   ├── view_products.php             # Manage existing products
+│   ├── insert_categories.php         # Add product categories
+│   ├── view_categories.php           # Manage categories
+│   ├── insert_brands.php             # Add product brands
+│   ├── view_brands.php               # Manage brands
+│   ├── list_orders.php               # View and manage customer orders
+│   ├── list_users.php                # View and manage registered users
+│   └── 📁 product_images/            # Storage for product images
+│
+├── 📁 functions/                     # Utility functions used throughout the site
+│   ├── common_function.php           # Core e-commerce functions
+│   │   ├── getproducts()            # Fetch and display products
+│   │   ├── getcategories()          # Display categories sidebar
+│   │   ├── getbrands()              # Display brands sidebar
+│   │   ├── search_product()         # Product search functionality
+│   │   ├── view_details()           # Product detail view
+│   │   ├── cart()                   # Add to cart functionality
+│   │   ├── cart_item()              # Count cart items
+│   │   ├── total_cart_price()       # Calculate cart total
+│   │   ├── get_unique_categories()  # Filter by category
+│   │   ├── get_unique_brands()      # Filter by brand
+│   │   └── getIPAddress()           # Get user IP for cart tracking
+│   └── display_functions.php        # Additional display utilities
+│
+├── 📁 images/                        # Static assets and media files
+│   ├── logo.png                     # Site logo
+│   ├── banner.png                   # Homepage banner
+│   ├── product_images/              # Product showcase images
+│   └── icons/                       # UI icons and graphics
+│
+├── 📁 includes/                      # Shared components and configurations
+│   ├── connect.php (db.php)         # Database connection configuration
+│   ├── header.php                   # Common header template
+│   ├── footer.php                   # Common footer template
+│   └── navigation.php               # Navigation components
+│
+├── 📁 users_area/                    # User dashboard, authentication, and profile management
+│   ├── user_registration.php        # New user signup
+│   ├── user_login.php               # User authentication
+│   ├── user_logout.php              # Session termination
+│   ├── profile.php                  # User profile dashboard
+│   ├── edit_account.php             # Update user information
+│   ├── delete_account.php           # Account deletion
+│   ├── my_orders.php                # Order history
+│   ├── pending_orders.php           # Pending order status
+│   ├── user_payments.php            # Payment processing
+│   └── confirm_payment.php          # Payment confirmation
+│
+├── 📄 Core Application Files
+├── index.php                        # Homepage - main store interface
+├── display_all.php                  # Complete product catalog
+├── product_details.php              # Individual product view with details
+├── search_product.php               # Product search results
+├── cart.php                         # Shopping cart management
+├── checkout.php                     # Order processing and payment
+│
+├── 📄 Styling & Assets
+├── style.css                        # Custom CSS styles and responsive design
+│
+├── 📄 Configuration & Documentation
+├── .gitattributes                   # Git configuration for text files
+├── LICENSE                          # MIT License
+└── README.md                        # Project documentation and setup guide
+
 ```
+
+## 🗂️ Directory Breakdown
+
+### **Frontend Structure**
+```
+Public Pages:
+├── 🏠 index.php              # Homepage with featured products
+├── 📋 display_all.php        # All products with filtering
+├── 🔍 search_product.php     # Search results
+├── 📦 product_details.php    # Product detail page
+└── 🛒 cart.php              # Shopping cart
+
+User Authentication:
+├── 🔐 user_registration.php  # Sign up
+├── 🚪 user_login.php         # Sign in
+└── 👤 profile.php            # User dashboard
+```
+
+### **Backend Structure**
+```
+Admin Panel:
+├── 🔧 admin_dashboard.php    # Control center
+├── ➕ insert_product.php     # Add products
+├── 📝 view_products.php      # Manage products
+├── 🏷️ insert_categories.php  # Add categories
+├── 📊 list_orders.php        # Order management
+└── 👥 list_users.php         # User management
+
+Database Operations:
+├── 🔗 connect.php            # MySQL connection
+└── 🛠️ common_function.php    # CRUD operations
+```
+
+### **Core Features by File**
+
+| File | Primary Function | Key Features |
+|------|-----------------|--------------|
+| `index.php` | Homepage | Product showcase, navigation, search |
+| `cart.php` | Shopping Cart | Add/remove items, quantity update, checkout |
+| `display_all.php` | Product Catalog | All products, category/brand filtering |
+| `search_product.php` | Search Results | Product search with keywords |
+| `product_details.php` | Product View | Detailed product information |
+| `checkout.php` | Order Processing | Payment and order confirmation |
+
+### **Database Schema (Inferred)**
+```sql
+Tables:
+├── products              # Product catalog
+│   ├── product_id (PK)
+│   ├── product_title
+│   ├── product_description
+│   ├── product_price
+│   ├── product_image1
+│   ├── category_id (FK)
+│   └── brand_id (FK)
+│
+├── categories            # Product categories
+│   ├── category_id (PK)
+│   └── category_title
+│
+├── brands               # Product brands
+│   ├── brand_id (PK)
+│   └── brand_title
+│
+├── users                # User accounts
+│   ├── user_id (PK)
+│   ├── username
+│   ├── user_email
+│   └── user_password
+│
+├── cart_details         # Shopping cart
+│   ├── product_id (FK)
+│   ├── ip_address
+│   └── quantity
+│
+└── user_orders          # Order history
+    ├── order_id (PK)
+    ├── user_id (FK)
+    ├── product_id (FK)
+    └── order_status
+```
+
+## 🔧 Technology Stack
+
+- **Backend**: PHP 7.x+
+- **Database**: MySQL/MariaDB
+- **Frontend**: HTML5, CSS3, Bootstrap 5.3.5
+- **Icons**: Font Awesome 6.7.2
+- **Server**: Apache (XAMPP/WAMP recommended)
+- **Session Management**: PHP Sessions
+- **Security**: IP-based cart tracking, user authentication
+
+## 🚀 Key Functionalities
+
+### **User Features**
+- ✅ Product browsing with categories and brands
+- ✅ Search functionality
+- ✅ Shopping cart management
+- ✅ User registration and authentication
+- ✅ Profile management
+- ✅ Order tracking
+
+### **Admin Features**
+- ✅ Product management (CRUD)
+- ✅ Category and brand management
+- ✅ Order processing and status updates
+- ✅ User account oversight
+- ✅ Inventory control
+
+### **System Features**
+- ✅ Responsive design (Bootstrap)
+- ✅ Session-based authentication
+- ✅ IP-based cart persistence
+- ✅ Image upload and management
+- ✅ SQL injection protection (prepared statements recommended)
 
 ---
 

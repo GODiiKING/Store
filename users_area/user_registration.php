@@ -87,7 +87,7 @@ if(isset($_POST['user_register'])){
     $user_ip=getIPAddress(); // function to get user IP address
 
     // select query
-    $select_query = "select * from `admin_table` where username='$user_username' or user_email='$user_email'"; // query to check if user already exists
+    $select_query = "select * from `user_table` where username='$user_username' or user_email='$user_email'"; // query to check if user already exists
     $result = mysqli_query($con, $select_query); // function to execute the query
     $row_count = mysqli_num_rows($result);  
     if($row_count > 0){
