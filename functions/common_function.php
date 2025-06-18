@@ -5,7 +5,7 @@
 
 // getting products
 function getproducts(){
-    global $con;
+    global $con; // connect.php
 
     // condition to check isset or not
     if(!isset($_GET['category'])){
@@ -44,7 +44,7 @@ function getproducts(){
 
 // getting all products
 function get_all_products(){
-    global $con;
+    global $con; // connect.php
 
     // condition to check isset or not
     if(!isset($_GET['category'])){
@@ -82,7 +82,7 @@ function get_all_products(){
 
 // getting unique categories
 function get_unique_categories(){
-    global $con;
+    global $con; // connect.php
 
     // condition to check isset or not
     if(isset($_GET['category'])){   
@@ -120,7 +120,7 @@ function get_unique_categories(){
 
 // getting unique brands
 function get_unique_brands(){
-    global $con;
+    global $con; // connect.php
 
     // condition to check isset or not
     if(isset($_GET['brand'])){   
@@ -158,7 +158,7 @@ function get_unique_brands(){
 
 // displaying brands in sidenav
 function getbrands(){
-    global $con;
+    global $con; // connect.php
     $select_brands="select * from `brands`";
           $result_brands=mysqli_query($con, $select_brands);
           while($row_data=mysqli_fetch_assoc($result_brands)){
@@ -173,7 +173,7 @@ function getbrands(){
 
 // displaying categories in sidenav
 function getcategories(){
-    global $con;
+    global $con; // connect.php
     $select_categories="select * from `categories`";
           $result_categories=mysqli_query($con, $select_categories);
           while($row_data=mysqli_fetch_assoc($result_categories)){
@@ -187,7 +187,7 @@ function getcategories(){
 
 // searching products function
 function search_product(){
-    global $con;
+    global $con; // connect.php
     if(isset($_GET['search_data_product'])){
         $search_data_value=$_GET['search_data'];
     $search_query="Select * from `products` where product_keywords like '%$search_data_value%'";
@@ -223,7 +223,7 @@ function search_product(){
 
 // view details function
 function view_details() {
-  global $con;
+  global $con; // connect.php
 
   // Check if 'product_id' is set
   if (isset($_GET['product_id'])) {
@@ -357,7 +357,7 @@ function cart_item(){
 
 // function to get user order details
 function get_user_order_details(){
-  global $con;
+  global $con; // connect.php
   $username = $_SESSION['username'];
   $get_details = "SELECT * FROM `user_table` WHERE username='$username'";
   $result_query = mysqli_query($con, $get_details);

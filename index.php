@@ -50,16 +50,19 @@ session_start();
         </li>
 
         <?php 
-        if(isset($_SESSION['username'])){
-          echo "<li class='nav-item'>
-          <a class='nav-link text-white' href='./users_area/profile.php'>My Account</a>
-        </li>";
-        } else {
-          echo "<li class='nav-item'>
-          <a class='nav-link text-white' href='./users_area/user_registration.php'>Register</a>
-        </li>";
-        }
-        ?>
+// Check if the user is logged in by verifying if the 'username' session variable is set
+if(isset($_SESSION['username'])){
+    // If the user is logged in, display a navigation link to their profile page
+    echo "<li class='nav-item'>
+    <a class='nav-link text-white' href='./users_area/profile.php'>My Account</a>
+    </li>";
+} else {
+    // If the user is not logged in, display a navigation link to the registration page
+    echo "<li class='nav-item'>
+    <a class='nav-link text-white' href='./users_area/user_registration.php'>Register</a>
+    </li>";
+}
+?>
 
         <!-- <li class="nav-item">
           <a class="nav-link" href="./users_area/user.registration.php">Register</a>

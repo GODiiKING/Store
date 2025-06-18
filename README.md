@@ -28,6 +28,7 @@
     - [**User Features**](#user-features)
     - [**Admin Features**](#admin-features)
     - [**System Features**](#system-features)
+  - [🙏 Credits](#-credits)
   - [🤝 How to Contribute](#-how-to-contribute)
   - [📄 License](#-license)
     - [✅ Suggestions to Improve the README:](#-suggestions-to-improve-the-readme)
@@ -300,6 +301,23 @@ Tables:
 - ✅ SQL injection protection (prepared statements recommended)
 
 ---
+
+## 🙏 Credits
+
+- **Tutorials and Guides**:
+  - [PHP Tutorial - Bouw een webshop met slimme zoekmachine!](https://www.youtube.com/watch?v=xF9eMHB9Y70)
+  - [Ecommerce Website With PHP & MySql](https://www.youtube.com/watch?v=_knfmmKXSsk&list=PL9R2s5XMUJUNv7x_SRhLajAv3VaUhFFgJ)
+  - [PHP Programming Language Tutorial - Full Course](https://www.youtube.com/watch?v=OK_JCtrrv-c)
+  - [CloudDevs PHP E-commerce Platform Guide](https://clouddevs.com/php/e-commerce-platform/)
+
+- **Contributors**:
+  - [Marco](https://github.com/msh31) for backend assistance and feature suggestions plus feedback.
+
+- **Images and Assets**:
+  - Product images sourced from [XYZ Anime API](https://xyzanimeapi.com) and [Free Anime Resources](https://freeanimeresources.com).
+
+- **Icons**:
+  - Icons provided by [Font Awesome](https://fontawesome.com).
 
 ## 🤝 How to Contribute
 
