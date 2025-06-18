@@ -1,6 +1,6 @@
 # Anime Store
 
-![Anime Store Banner](banner.png)
+![Anime Store Banner](animestore.png)
 
 **Anime Store** is a web-based e-commerce platform for anime enthusiasts. Browse through a collection of anime-themed merchandise, manage your account, and enjoy seamless shopping—whether you're a casual fan or an ultimate otaku. Admins can manage the store through a dedicated dashboard for product, order, and user management.
 
