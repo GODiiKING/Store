@@ -309,12 +309,14 @@ Tables:
   - [Ecommerce Website With PHP & MySql](https://www.youtube.com/watch?v=_knfmmKXSsk&list=PL9R2s5XMUJUNv7x_SRhLajAv3VaUhFFgJ)
   - [PHP Programming Language Tutorial - Full Course](https://www.youtube.com/watch?v=OK_JCtrrv-c)
   - [CloudDevs PHP E-commerce Platform Guide](https://clouddevs.com/php/e-commerce-platform/)
+  - [The PHP Handbook – Learn PHP for Beginners](https://www.freecodecamp.org/news/the-php-handbook/)
+  - [PHP Tutorial – How to Setup PHP and XAMPP for Your Project](https://www.freecodecamp.org/news/how-to-get-started-with-php/)
 
 - **Contributors**:
   - [Marco](https://github.com/msh31) for backend assistance and feature suggestions plus feedback.
 
 - **Images and Assets**:
-  - Product images sourced from [XYZ Anime API](https://xyzanimeapi.com) and [Free Anime Resources](https://freeanimeresources.com).
+  - Product images sourced from [Pinterest](https://www.pinterest.com/)
 
 - **Icons**:
   - Icons provided by [Font Awesome](https://fontawesome.com).
